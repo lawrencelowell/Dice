@@ -1,79 +1,96 @@
-void setup()
-{
-	noLoop();
-}
-void draw()
-{
-	//your code here
-}
-void mousePressed()
-{
-	redraw();
-}
-class Die //models one single dice cube
-{
-	//variable declarations here
-	
-	Die(int x, int y) //constructor
-	{
-		//variable initializations here
-	}
-	void roll()
-	{
-		//your code here
-	}
-	void show()
-	{
-		//your code here
-	}
-}
 
 void setup()
 {
-	noLoop();
+  noLoop();
+  size(300, 300);
+  stroke(1);
 }
 void draw()
 {
-	//your code here
+  for (int y = 45; y<=300-45; y = y + 45)
+  {
+    for (int x = 45; x <=300-45; x= x +45)
+    {
+      Die kek = new Die(x, y);
+      kek.roll();
+      kek.show();
+    }
+  }
 }
 void mousePressed()
 {
-	redraw();
+  redraw();
 }
 class Die 
 {
-	//variable declarations here
-	int posx,posy,dot;
-	Die(int x, int y) //constructor
-	{
-	posx = x;
-  posy = y;
-	}
-	void roll()
-	{
-r = (int)(Math.random()*6)+1;
-if(r == 1)
-{
-  // insert something 
-}
-if(r == 2)
-// insert something
-
-if(r == 3)
-// insert something
-
-if(r == 4)
-// insert something
-
-if(r == 5)
-// insert something
-
-if(r == 6)
-// insert something
-}
-	}
-	void show()
-	{
-		//your code here
-	}
+  //variable declarations here
+  int posx, posy, dot;
+  Die(int x, int y) //constructor
+  {
+    posx = x;
+    posy = y;
+  }
+  void roll()
+  {
+    dot = (int)(Math.random()*6)+1;
+  }
+  void show()
+  {
+    if (dot == 1)
+    {
+          fill(190, 0, 0);
+      rect(posx, posy, 30, 30, 7);
+      fill(255);
+      ellipse(posx + 15, posy +15, 5, 5);
+    }
+    if (dot == 2)
+    {
+          fill(0, 255, 255);
+      rect(posx, posy, 30, 30, 7);
+      fill(255);
+      ellipse(posx + 8, posy +22, 5, 5);
+      ellipse(posx + 22, posy +8, 5, 5);
+    }
+    if (dot == 3)
+    {    fill(235, 0, 235);
+      rect(posx, posy, 30, 30, 7);
+      fill(255);
+      ellipse(posx + 8, posy +22, 5, 5);
+      ellipse(posx + 15, posy +15, 5, 5);
+      ellipse(posx + 22, posy +8, 5, 5);
+    }
+    if (dot == 4)
+    {      
+          fill(255, 235, 0);
+      rect(posx, posy, 30, 30, 7);
+      fill(255);
+      ellipse(posx + 10, posy + 10, 5, 5);
+      ellipse(posx + 10, posy + 20, 5, 5);
+      ellipse(posx + 20, posy + 10, 5, 5);
+      ellipse(posx + 20, posy + 20, 5, 5);
+    }
+    if (dot == 5)
+    {
+          fill(240, 128, 114);
+      rect(posx, posy, 30, 30, 7);
+      fill(255);
+      ellipse(posx + 8, posy +22, 5, 5);
+      ellipse(posx + 15, posy +15, 5, 5);
+      ellipse(posx + 22, posy +8, 5, 5);
+      ellipse(posx + 22, posy +22, 5, 5);
+      ellipse(posx + 8, posy +8, 5, 5);
+    }
+    if (dot == 6)
+    {
+      fill(255, 140, 0);
+      rect(posx, posy, 30, 30, 7);
+      fill(255);
+      ellipse(posx + 10, posy + 8, 5, 5);
+      ellipse(posx + 10, posy + 16, 5, 5);
+      ellipse(posx + 10, posy + 24, 5, 5);
+      ellipse(posx + 20, posy + 8, 5, 5);
+      ellipse(posx + 20, posy + 16, 5, 5);
+      ellipse(posx + 20, posy + 24, 5, 5);
+    }
+  }
 }
