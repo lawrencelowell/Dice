@@ -1,4 +1,4 @@
-String s = "Cool thing";
+String s = "Cool things";
 int sum = 0;
 void setup()
 {
@@ -9,9 +9,10 @@ void setup()
 }
 void draw()
 {
+  background((int)(Math.random()*55+30), (int)(Math.random()*55+30), (int)(Math.random()*55+30));
   fill(0);
   rect(0, 0, 300, 50);
-  fill(255);
+  fill((int)(Math.random()*155)+100, (int)(Math.random()*155)+100, (int)(Math.random()*155)+100);
   textSize(24);
   text(s, 90, 30);
 
@@ -24,14 +25,16 @@ void draw()
       kek.show();
       kek.sum();
     }
-   fill(0);
-  rect(0, 280, 300, 70);
-  fill(255);
-  textSize(24);
-  text("Total Rolls = ",60,320);
-  text(sum, 220, 320);
+    fill(0);
+    rect(0, 280, 300, 70);
+    fill((int)(Math.random()*155)+100, (int)(Math.random()*155)+100, (int)(Math.random()*155)+100);
+    textSize(24);
+    text("Total Rolls ", 60, 320);
+    fill((int)(Math.random()*205+50), (int)(Math.random()*205+50), (int)(Math.random()*205+50));
+    text("= ", 190, 320);
+    fill((int)(Math.random()*155+100), (int)(Math.random()*155+100), (int)(Math.random()*155+100));
+    text(sum, 220, 320);
   }
-
 }
 void mousePressed()
 {
