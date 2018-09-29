@@ -31,7 +31,7 @@ void draw()
   text("Total Rolls = ",60,320);
   text(sum, 220, 320);
   }
-  System.out.println(sum);
+
 }
 void mousePressed()
 {
