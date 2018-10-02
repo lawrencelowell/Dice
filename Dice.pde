@@ -25,7 +25,9 @@ void draw()
       kek.show();
       kek.sum();
     }
-    fill(0);
+
+  }
+     fill(0);
     rect(0, 280, 300, 70);
     fill((int)(Math.random()*155)+100, (int)(Math.random()*155)+100, (int)(Math.random()*155)+100);
     textSize(24);
@@ -34,7 +36,6 @@ void draw()
     text("= ", 190, 320);
     fill((int)(Math.random()*155+100), (int)(Math.random()*155+100), (int)(Math.random()*155+100));
     text(sum, 220, 320);
-  }
 }
 void mousePressed()
 {
@@ -116,5 +117,18 @@ class Die
   }
   void sum() {
     sum = sum + dot;
+    if (sum >= 100){
+      background(0);
+    fill(255,255,155);
+    ellipse(150,170,200,200);
+  fill(0);
+ellipse(110,205,40,40);
+ellipse(190,205,40,40);
+noFill();
+ellipse(150,125,60,60);
+  rect(0, 0, 300, 50);
+ fill((int)(Math.random()*155)+100, (int)(Math.random()*155)+100, (int)(Math.random()*155)+100);
+ textSize(24);
+ text("You died 100+.", 70, 30);}
   }
 }
