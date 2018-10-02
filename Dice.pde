@@ -1,4 +1,4 @@
-String s = "Cool things";
+String s = "Cool things.";
 int sum = 0;
 void setup()
 {
@@ -23,7 +23,8 @@ void draw()
       Die kek = new Die(x, y);
       kek.roll();
       kek.show();
-      kek.sum();
+      sum = sum + kek.dot;
+      sumd();
     }
 
   }
@@ -115,8 +116,9 @@ class Die
       ellipse(posx + 20, posy + 24, 5, 5);
     }
   }
-  void sum() {
-    sum = sum + dot;
+
+}
+  void sumd() {
     if (sum >= 100){
       background(0);
     fill(255,255,155);
@@ -131,4 +133,3 @@ ellipse(150,125,60,60);
  textSize(24);
  text("You died 100+.", 70, 30);}
   }
-}
